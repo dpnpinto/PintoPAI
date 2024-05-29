@@ -11,10 +11,10 @@ There are two versions of cgroups in Linux: cgroup v1 and cgroup v2. cgroup v2 i
 ARch Linux uses by default cgroups V1 and V2, for podaman to run not only as root, and we need cgroups V2 for install crun first we will force ARch to use only cgroups V2.
 Cgroup v2 offers several improvements over cgroup v1, such as the following:
 
--> Single unified hierarchy design in API
--> Safer sub-tree delegation to containers
--> Newer features like Pressure Stall Information
--> Enhanced resource allocation management and isolation across multiple resources
+* Single unified hierarchy design in API
+* Safer sub-tree delegation to containers
+* Newer features like Pressure Stall Information
+* Enhanced resource allocation management and isolation across multiple resources
          * Unified accounting for different types of memory allocations (network memory, kernel memory, etc)
          * Accounting for non-immediate resource changes such as page cache write backs
 
