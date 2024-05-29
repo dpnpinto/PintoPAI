@@ -15,7 +15,7 @@ Cgroup v2 offers several improvements over cgroup v1, such as the following:
 * Safer sub-tree delegation to containers
 * Newer features like Pressure Stall Information
 * Enhanced resource allocation management and isolation across multiple resources
- * Unified accounting for different types of memory allocations (network memory, kernel memory, etc)
- * Accounting for non-immediate resource changes such as page cache write backs
+  * Unified accounting for different types of memory allocations (network memory, kernel memory, etc)
+  * Accounting for non-immediate resource changes such as page cache write backs
 
 For the instlation if you use GRUB as bootloader you just need to force the use of c group V2 at start of the system.
