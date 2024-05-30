@@ -19,5 +19,6 @@ ARch Linux uses by default cgroups V1 and V2, for podaman to run not only as roo
   * Unified accounting for different types of memory allocations (network memory, kernel memory, etc)
   * Accounting for non-immediate resource changes such as page cache write backs
 
-For the instalation if you use GRUB as bootloader you just need to force the use of cgroup V2 at start of the system.
+For the instalation if you use GRUB as bootloader you just need to force the use only cgroup V2 at start of the system.
+At the moment, as described in Arch wiki Arch Linux uses V2 as default cgroup_no_v1="all"
 
