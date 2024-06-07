@@ -8,7 +8,7 @@ Later I will make a script to install in Rocky Linux and Debian
 
 On Linux, control groups constrain resources that are allocated to processes.
 There are two versions of cgroups in Linux: cgroup v1 and cgroup v2. cgroup v2 is the new generation of the cgroup API.
-ARch Linux uses by default cgroups V1 and V2, for podaman to run not only as root, and as we need cgroups V2 to install crun first we will force ARch to use only cgroups V2.
+ARch Linux uses by default cgroups V1 and V2, for podman to run not only as root, and as we need cgroups V2 to install crun first we will force ARch to use only cgroups V2.
 
 ### Cgroup v2 offers several improvements over cgroup v1, such as the following:
 
