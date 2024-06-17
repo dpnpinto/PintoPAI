@@ -3,7 +3,7 @@ This project is for the instlation of Ollama in a container using PodMan
 The Instalation is on Arch Linux, because I use it in my worKstation
 Later I will make a script to install in Rocky Linux and Debian
 
-## Podman instlation
+## Podman instalation
 
 
 On Linux, control groups constrain resources that are allocated to processes.
