@@ -28,4 +28,4 @@ And the just make grub config again with the new parameter with **sudo grub-mkco
 
 After some options I tried Podman desktop and I like it because is the some interface for Linux, IOS and WIndows. As I will teste the AI models in several desktops I use it.
 The instalation is very simple and you can get it from https://podman-desktop.io.
-The desktop podman have a simple extencion caled AI lab.
+The podman desktop have a simple extenction in top of the podaman desktop caled AI lab.
