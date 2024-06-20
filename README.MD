@@ -22,12 +22,12 @@ Arch Linux uses by default cgroups V1 and V2, for podman to run not only as root
 
 For the instalation if you use GRUB as bootloader you just need to force the use only cgroup V2 at start of the system.
 At the moment, as described in Arch wiki Arch Linux uses V2 as default, anyway I foce in GRUB to use only V2 with the kernel cgroup_no_v1="all"
-For do that you have to edit de defaults for grub in /etc/default/grub, you can edit the file  with vim, and put the kelnel parameter in GRUB_CMDLINE_LINUX_DEFAULT
+For do that you have to edit de defaults for grub in /etc/default/grub, you can edit the file  with vim, and put the kernel parameter in GRUB_CMDLINE_LINUX_DEFAULT
 And the just make grub config again with the new parameter with **sudo grub-mkconfig -o /boot/grub/grub.cfg** and the reboot
 
 ## Podman Desktop
  
-After some options I tried Podman desktop and I like it because is the some interface for Linux, IOS and WIndows. As I will teste the AI models in several desktops I use it.
+After some options I tried Podman desktop and I like it because is the some interface for Linux, IOS and WIndows. As I will test the AI models in several desktops I use it.
 The instalation is very simple and you can get it from https://podman-desktop.io.
 You can install it from aur https://aur.archlinux.org/packages/podman-desktop or you can use flatpak https://flathub.org/apps/io.podman_desktop.PodmanDesktop
 The podman desktop have a simple extenction in top of the podman desktop caled AI lab https://podman-desktop.io/docs/ai-lab.
