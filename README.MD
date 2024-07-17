@@ -1,7 +1,7 @@
 # Pinto Personal Artificial Inteligence (PintoPAI)
 This project is for the instalation of Ollama in a container using PodMan
-The Instalation is on Arch Linux, because I use it in my worKstation
-Later I will make a script to install in Rocky Linux and Debian.
+The Instalation is on Arch Linux, because I use it in my WorkStation
+Later I will make a script to install in Rocky Linux and maybe Debian.
 Why I use Podman ? Because docker have a systemd process allways runing and I like my workstation clean from processes that are not runing nothing.  
 
 ## Podman instalation
