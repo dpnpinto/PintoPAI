@@ -55,3 +55,5 @@ The script might have created a user and group named "ollama." You can remove th
 
 - sudo userdel ollama
 - sudo groupdel ollama
+
+- Refereces at https://ollama.com
