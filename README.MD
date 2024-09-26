@@ -34,6 +34,8 @@ The podman desktop have a simple extenction in top of the podman desktop caled A
 
 ## Install Ollama terminal
 
+- Refereces at https://ollama.com
+
 curl -fsSL https://ollama.com/install.sh | sh
 
 ## Uninstall Ollama
@@ -55,5 +57,3 @@ The script might have created a user and group named "ollama." You can remove th
 
 - sudo userdel ollama
 - sudo groupdel ollama
-
-- Refereces at https://ollama.com
