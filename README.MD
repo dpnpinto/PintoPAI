@@ -34,7 +34,7 @@ The podman desktop have a simple extenction in top of the podman desktop caled A
 
 ## Install Ollama terminal
 
-- Refereces at https://ollama.com
+Refereces at https://ollama.com
 
 curl -fsSL https://ollama.com/install.sh | sh
 
