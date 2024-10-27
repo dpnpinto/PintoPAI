@@ -1,4 +1,8 @@
 #!/bin/bash
+# Yes I like robotic voice in my Ollama, Like War Games from 1983
+# To run this you have to install Ollama, festival and figlet for the lertes ;)
+# by dpnpinto.github.io/
+# As the others projects, desclaymer, use at your own risk :)
 figlet PintoPAI
 echo "-----------------------------------------"
 echo "# Pinto Personal Artificial Inteligence #"
