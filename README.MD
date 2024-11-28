@@ -57,3 +57,6 @@ The script might have created a user and group named "ollama." You can remove th
 
 - sudo userdel ollama
 - sudo groupdel ollama
+
+## Easy mode for all graica cards AMD/NVIDIA
+You  have a very easy way to test LLM's with a GUI using [LM Studio](https://lmstudio.ai), you can download the binary from here https://lmstudio.ai/download
