@@ -6,11 +6,9 @@ echo "-----------------------------------------"
 echo
 while true; do
 	read -rep ">>> " pergunta
+	resposta=$(ollama run llama3.1 "$pergunta")
 	echo "--------------------------------------"
-#	echo ollama run llama3.1 $pergunta | festival --tts        
-	resposta=$(ollama run llama3.1 $pergunta)
+	echo "$resposta"
 	echo "--------------------------------------"
-	echo $resposta
-	echo "--------------------------------------"
-	echo $resposta | festival --tts
+	echo "$resposta" | festival --tts
 done
