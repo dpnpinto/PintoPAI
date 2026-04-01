@@ -1,1 +1,1 @@
-![Digital Neuron](digital.png)
+![Digital Neuron](neuronio_modelo.png)
