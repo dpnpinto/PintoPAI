@@ -32,7 +32,7 @@ Uma rede neuronal real não tem apenas um peso; tem milhares ou milhões deles. 
 abla$) é simplesmente um **vetor (uma lista) de todas as derivadas parciais** da função de custo em relação a cada um dos pesos e bias da rede:
 
 $$
-abla L =  begin{bmatrix} rac{\partial L}{\partial w_1} \ rac{\partial L}{\partial w_2} \  dots \ rac{\partial L}{\partial w_n} \end{bmatrix}$$
+abla L =  \begin{bmatrix} rac{\partial L}{\partial w_1} \ rac{\partial L}{\partial w_2} \  dots \ rac{\partial L}{\partial w_n} \end{bmatrix}$$
 
 O gradiente aponta matematicamente para a direção de *maior crescimento* da função de custo. Como o objetivo é minimizar o erro, caminha-se na direção contrária ao gradiente. Este algoritmo chama-se **Gradiente Descendente** (*Gradient Descent*).
 
