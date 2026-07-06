@@ -1,5 +1,4 @@
-version: '3.8'
-
+# This work with no problem
 services:
   llama-server:
     image: ghcr.io/ggml-org/llama.cpp:server-cuda
