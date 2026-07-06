@@ -1,0 +1,31 @@
+# let's test have both GPU internal and externall
+services:
+  llama-server:
+    # We use the Vulkan backend because it is the only cross-platform API 
+    # capable of seeing both NVIDIA and Intel hardware simultaneously.
+    image: ghcr.io/ggml-org/llama.cpp:server-vulkan
+    container_name: llama-vulkan-hybrid
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      # Map your local models directory to the container
+      - ./models:/models
+    devices:
+      # 1. Exposes the Intel Integrated GPU to the container
+      - /dev/dri:/dev/dri
+    deploy:
+      resources:
+        reservations:
+          devices:
+            # 2. Exposes the NVIDIA GPU to the container
+            - driver: nvidia
+              count: all
+              capabilities: [gpu, compute, utility]
+    command: >
+      -m /models/your-model.gguf
+      -c 4096
+      --host 0.0.0.0
+      --port 8080
+      -ngl 99
+      --split-mode row
