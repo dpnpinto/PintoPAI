@@ -1,0 +1,29 @@
+services:
+  llama-server:
+    image: ghcr.io/ggml-org/llama.cpp:server-cuda
+    container_name: llama-cpp-cuda
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./models:/models
+    command: >
+      --model /models/Qwen3-Coder-30B-A3B-Instruct-Q5_K_M.gguf
+      --host 0.0.0.0
+      --port 8080
+      --ctx-size 4096
+      --batch-size 4096
+      --ubatch-size 4096
+      --threads 4
+      --n-gpu-layers -1
+      --cache-type-k q8_0
+      --cache-type-v q8_0
+      --flash-attn on
+      --no-mmap
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
