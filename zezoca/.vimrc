@@ -1,4 +1,5 @@
-" Example of caling llama in vim
+"Example of calling llama in vim
+
 let g:llama_config = {
 \   'endpoint_fim': 'http://your__machine:8080/infill',
 \   'show_info': 0,
