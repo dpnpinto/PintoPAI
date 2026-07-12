@@ -1,3 +1,6 @@
 http://your_local_machine_name.local {
   reverse_proxy  the_ip_of_machine:port
 }
+https://your_local_machine_name.local {
+  reverse_proxy  the_ip_of_machine:port
+}
