@@ -8,4 +8,4 @@ let g:llama_config = {
 
 call plug#begin()
 Plug 'ggml-org/llama.vim'
-:call plug#end()
+call plug#end()
