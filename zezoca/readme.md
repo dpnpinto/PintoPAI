@@ -5,7 +5,7 @@ relies primarily on [Docker](https://www.docker.com) running on [Arch Linux](htt
 
 ## [Youtube Video](https://youtu.be/tPE8WkHRAcs?si=OaUuqnnhe4Dw3bSk) 
 
-Every time you update the drievers dont forget to update NVIDIA CDI - nvidia-container-toolkit
+Every time you update the drivers dont forget to update NVIDIA CDI - nvidia-container-toolkit
 
 Example:
 
