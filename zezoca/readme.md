@@ -7,6 +7,10 @@ relies primarily on [Docker](https://www.docker.com) running on [Arch Linux](htt
 
 Every time you update the drivers dont forget to update NVIDIA CDI (Container Device Interface) - nvidia-container-toolkit
 
+```console
+sudo pacman -Syu nvidia-container-toolkit
+```
+
 Example:
 
 WARNING: updating nvidia-utils version (580.159.04 -> 580.173.02) in /etc/cdi/nvidia.yaml using plain string substitution.
