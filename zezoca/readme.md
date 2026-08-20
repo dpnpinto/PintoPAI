@@ -11,7 +11,7 @@ Every time you update the drivers dont forget to update NVIDIA CDI (Container De
 sudo pacman -Syu nvidia-container-toolkit
 ```
 
-You can easy update the CDI to ;)
+If you prefer you can easy update the CDI config file nvidia.yaml ;)
 
 ```console
 sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml && sudo systemctl restart docker
