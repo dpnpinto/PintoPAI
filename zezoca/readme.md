@@ -11,7 +11,13 @@ Every time you update the drivers dont forget to update NVIDIA CDI (Container De
 sudo pacman -Syu nvidia-container-toolkit
 ```
 
-Example:
+You can easy update the CDI to ;)
+
+```console
+sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml && sudo systemctl restart docker
+```
+
+Error Example:
 
 WARNING: updating nvidia-utils version (580.159.04 -> 580.173.02) in /etc/cdi/nvidia.yaml using plain string substitution.
  -> If you meet problems, run the following command to regenerate the CDI file:nvidia-ctk cdi generate --output="/etc/cdi/nvidia.yaml"
