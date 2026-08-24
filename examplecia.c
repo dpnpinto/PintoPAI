@@ -1,27 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <math.h> // need math for exponecial exp
 
+// Define Neural Network dimension
 #define INPUT_NODES 2
 #define HIDDEN_NODES 4 
 #define OUTPUT_NODES 1
 
 // Simple XOR Training Data
-double train_inputs[4][2] = {{0,0}, {0,1}, {1,0}, {1,1}};
-double train_outputs[4][1] = {{0}, {1}, {1}, {0}};
+// The complete dataset for XOR consists of just 4 samples (2 inputs, 1 output)
+#define TRAIN_SAMPLES 4
+double train_inputs[TRAIN_SAMPLES][INPUT_NODES] = {{0,0}, {0,1}, {1,0}, {1,1}};
+double train_outputs[TRAIN_SAMPLES][OUTPUT_NODES] = {{0}, {1}, {1}, {0}};
 
+// The matrix with the data that methers that will be trained
 double weight1[INPUT_NODES][HIDDEN_NODES];
 double weight2[HIDDEN_NODES][OUTPUT_NODES];
 double bias1[HIDDEN_NODES];
 double bias2[OUTPUT_NODES];
 
+// The activation function and its corresponding derivative
 double sigmoid(double x) { return 1.0 / (1.0 + exp(-x)); }
 double sigmoid_derivative(double x) { return x * (1.0 - x); }
 
+// The trainig function
 void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     double hidden[HIDDEN_NODES];
     double output_layer[OUTPUT_NODES];
-    double learning_rate = 0.5;
+    double learning_rate = 0.5; // the small step
 
     // 1. Feedforward
     for (int i = 0; i < HIDDEN_NODES; i++) {
