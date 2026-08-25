@@ -37,7 +37,7 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     }
     for (int i = 0; i < OUTPUT_NODES; i++) {
         double sum = bias_out_node[i];
-        for (int j = 0; j < HIDDEN_NODES; j++) sum += hidden[j] * weight2[j][i];
+        for (int j = 0; j < HIDDEN_NODES; j++) sum += hidden[j] * weight_hid_out[j][i];
         output_layer[i] = sigmoid(sum);
     }
 
@@ -58,7 +58,7 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
 
     // 3. Update Weights
     for (int i = 0; i < HIDDEN_NODES; i++) {
-        for (int j = 0; j < OUTPUT_NODES; j++) weight2[i][j] += learning_rate * output_delta[j] * hidden[i];
+        for (int j = 0; j < OUTPUT_NODES; j++) weight_hid_out[i][j] += learning_rate * output_delta[j] * hidden[i];
         bias_hid_node[i] += learning_rate * hidden_delta[i];
     }
     for (int i = 0; i < INPUT_NODES; i++) {
@@ -78,7 +78,7 @@ int main() {
     bias_out_node[0] = 0; //Iniciate bias with zero is the best practive
 
     // Train for 10,000 times_train
-    for (int times_train = 0; times_train < 10000; times_train++) {
+    for (int times_train = 0; times_train < 1000000; times_train++) {
         for (int i = 0; i < 4; i++) train(train_inputs[i], train_outputs[i]);
     }
 
