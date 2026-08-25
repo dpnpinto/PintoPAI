@@ -70,10 +70,10 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
 int main() {
     // Random Initialization
     for (int i = 0; i < INPUT_NODES; i++) 
-        for (int j = 0; j < HIDDEN_NODES; j++) weight_in_hid[i][j] = ((double)rand()/RAND_MAX);
+        for (int j = 0; j < HIDDEN_NODES; j++) weight_in_hid[i][j] = ((double)rand()/RAND_MAX) * 2.0 - 1.0;//Random numbers from -1 to 1;
     for (int i = 0; i < HIDDEN_NODES; i++) {
-        bias_hid_node[i] = ((double)rand()/RAND_MAX);
-        weight_hid_out[i][0] = ((double)rand()/RAND_MAX);
+        bias_hid_node[i] = ((double)rand()/RAND_MAX) * 2.0 - 1.0; //Random numbers from -1 to 1
+        weight_hid_out[i][0] = ((double)rand()/RAND_MAX) * 2.0 - 1.0; //Random numbers from -1 to 1
     }
     bias_out_node[0] = ((double)rand()/RAND_MAX);
 
