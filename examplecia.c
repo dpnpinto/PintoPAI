@@ -16,8 +16,8 @@ double train_outputs[TRAIN_SAMPLES][OUTPUT_NODES] = {{0}, {1}, {1}, {0}};
 // The matrix with the data that methers that will be trained
 double weight1[INPUT_NODES][HIDDEN_NODES];
 double weight2[HIDDEN_NODES][OUTPUT_NODES];
-double bias1[HIDDEN_NODES];
-double bias2[OUTPUT_NODES];
+double bias_hid_node[HIDDEN_NODES];
+double bias_out_node[OUTPUT_NODES];
 
 // The activation function and its corresponding derivative
 double sigmoid(double x) { return 1.0 / (1.0 + exp(-x)); }
@@ -59,12 +59,12 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     // 3. Update Weights
     for (int i = 0; i < HIDDEN_NODES; i++) {
         for (int j = 0; j < OUTPUT_NODES; j++) weight2[i][j] += learning_rate * output_delta[j] * hidden[i];
-        bias1[i] += learning_rate * hidden_delta[i];
+        bias_hid_node[i] += learning_rate * hidden_delta[i];
     }
     for (int i = 0; i < INPUT_NODES; i++) {
         for (int j = 0; j < HIDDEN_NODES; j++) weight1[i][j] += learning_rate * hidden_delta[j] * input[i];
     }
-    for (int i = 0; i < OUTPUT_NODES; i++) bias2[i] += learning_rate * output_delta[i];
+    for (int i = 0; i < OUTPUT_NODES; i++) bias_out_node[i] += learning_rate * output_delta[i];
 }
 
 int main() {
@@ -72,10 +72,10 @@ int main() {
     for (int i = 0; i < INPUT_NODES; i++) 
         for (int j = 0; j < HIDDEN_NODES; j++) weight1[i][j] = ((double)rand()/RAND_MAX);
     for (int i = 0; i < HIDDEN_NODES; i++) {
-        bias1[i] = ((double)rand()/RAND_MAX);
+        bias_hid_node[i] = ((double)rand()/RAND_MAX);
         weight2[i][0] = ((double)rand()/RAND_MAX);
     }
-    bias2[0] = ((double)rand()/RAND_MAX);
+    bias_out_node[0] = ((double)rand()/RAND_MAX);
 
     // Train for 10,000 times_train
     for (int times_train = 0; times_train < 10000; times_train++) {
