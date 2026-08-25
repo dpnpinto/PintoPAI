@@ -75,7 +75,7 @@ int main() {
         bias_hid_node[i] = ((double)rand()/RAND_MAX) * 2.0 - 1.0; //Random numbers from -1 to 1
         weight_hid_out[i][0] = ((double)rand()/RAND_MAX) * 2.0 - 1.0; //Random numbers from -1 to 1
     }
-    bias_out_node[0] = ((double)rand()/RAND_MAX);
+    bias_out_node[0] = ((double)rand()/RAND_MAX) * 2.0 - 1.0;
 
     // Train for 10,000 times_train
     for (int times_train = 0; times_train < 10000; times_train++) {
