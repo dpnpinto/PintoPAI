@@ -52,7 +52,7 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     double hidden_delta[HIDDEN_NODES];
     for (int i = 0; i < HIDDEN_NODES; i++) {
         double error = 0;
-        for (int j = 0; j < OUTPUT_NODES; j++) error += output_delta[j] * weight2[i][j];
+        for (int j = 0; j < OUTPUT_NODES; j++) error += output_delta[j] * weight_hid_out[i][j];
         hidden_delta[i] = error * sigmoid_derivative(hidden[i]);
     }
 
