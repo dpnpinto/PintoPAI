@@ -31,12 +31,12 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
 
     // 1. Feedforward
     for (int i = 0; i < HIDDEN_NODES; i++) {
-        double sum = bias1[i];
+        double sum = bias_hid_node[i];
         for (int j = 0; j < INPUT_NODES; j++) sum += input[j] * weight1[j][i];
         hidden[i] = sigmoid(sum);
     }
     for (int i = 0; i < OUTPUT_NODES; i++) {
-        double sum = bias2[i];
+        double sum = bias_out_node[i];
         for (int j = 0; j < HIDDEN_NODES; j++) sum += hidden[j] * weight2[j][i];
         output_layer[i] = sigmoid(sum);
     }
