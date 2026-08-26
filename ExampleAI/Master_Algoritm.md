@@ -1,4 +1,4 @@
-#AI Unplugged: Demystifying the Magic with Pure C
+# AI Unplugged: Demystifying the Magic with Pure C
 
 Artificial Intelligence can feel like absolute magic. Between the endless buzzwords, the massive Python frameworks, and the billion-parameter models, it is easy to think that AI is a black box only a few tech giants can understand.
 But under the hood? There is no magic. It is just math, logic, and code. If you are tired of the hype and want to understand how things actually work, you are in the right place. In this series, we are embracing the KISS (Keep It Simple, Stupid) principle. We are stripping away the heavy libraries, ditching the bloated abstractions, and getting straight to the bare metal.
