@@ -45,11 +45,11 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     }
 
     // 2. Backpropagation
-    double output_error[OUTPUT_NODES];
-    double output_delta[OUTPUT_NODES];
+    double output_error[OUTPUT_NODES];  // store  the output errors
+    double output_delta[OUTPUT_NODES];   //  store the output delta
     for (int i = 0; i < OUTPUT_NODES; i++) {
-        output_error[i] = target[i] - output_layer[i];
-        output_delta[i] = output_error[i] * sigmoid_derivative(output_layer[i]);
+        output_error[i] = target[i] - output_layer[i];  //  get the error  for each output in this example we have only one
+        output_delta[i] = output_error[i] * sigmoid_derivative(output_layer[i]);  
     }
 
     double hidden_delta[HIDDEN_NODES];
