@@ -25,20 +25,23 @@ double sigmoid_derivative(double x) { return x * (1.0 - x); }
 
 // The trainig function
 void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
-    double hidden[HIDDEN_NODES];
-    double output_layer[OUTPUT_NODES];
+    double hidden[HIDDEN_NODES]; // local values for hidden nodes
+    double output_layer[OUTPUT_NODES]; // local values for output
     double learning_rate = 0.5; // the small step
 
     // 1. Feedforward
+    
+    // Feed the Hidden Nodes values
     for (int i = 0; i < HIDDEN_NODES; i++) {
         double sum = bias_hid_node[i];
-        for (int j = 0; j < INPUT_NODES; j++) sum += input[j] * weight_in_hid[j][i];
-        hidden[i] = sigmoid(sum);
+        for (int j = 0; j < INPUT_NODES; j++) sum += input[j] * weight_in_hid[j][i]; // make the calculation of (x*weight+bias) 
+        hidden[i] = sigmoid(sum); // all outputs of hidden layer of nodes have the values of the inputs of previous layer 
     }
+    // Feed the Output Nodes values
     for (int i = 0; i < OUTPUT_NODES; i++) {
         double sum = bias_out_node[i];
-        for (int j = 0; j < HIDDEN_NODES; j++) sum += hidden[j] * weight_hid_out[j][i];
-        output_layer[i] = sigmoid(sum);
+        for (int j = 0; j < HIDDEN_NODES; j++) sum += hidden[j] * weight_hid_out[j][i]; // make the calculation of (x*weight+bias) 
+        output_layer[i] = sigmoid(sum); // all outputs of output layer of nodes have the values of the inputs of previous layer 
     }
 
     // 2. Backpropagation
