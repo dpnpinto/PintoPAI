@@ -8,7 +8,7 @@
 #define OUTPUT_NODES 1
 
 // Simple XOR Training Data
-// The complete dataset for XOR consists of just 4 samples (2 inputs, 1 output)
+// The complete dataset for XOR consists of just 4 samples of 2 inputs and 1 output
 #define TRAIN_SAMPLES 4
 double train_inputs[TRAIN_SAMPLES][INPUT_NODES] = {{0,0}, {0,1}, {1,0}, {1,1}};
 double train_outputs[TRAIN_SAMPLES][OUTPUT_NODES] = {{0}, {1}, {1}, {0}};
