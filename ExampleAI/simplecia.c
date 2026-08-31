@@ -1,6 +1,9 @@
-// KISS form AI by Duarte Pedro Pinto
+// KISS approach of AI by Duarte Pedro Pinto
+// This code has less than 100 lines, but it is not intended to be optimized.
+// It is intended to be simple and understandable.
 // https://dpnpinto.github.io
 // https://www.youtube.com/@dpinto.engenharia
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h> // need math for exponecial exp
