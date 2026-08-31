@@ -66,7 +66,7 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
         hidden_delta[i] = error * sigmoid_derivative(hidden[i]);
     }
 
-    // 3. Update Weights
+    // 3. Update Weights and bias
     for (int i = 0; i < HIDDEN_NODES; i++) {
         for (int j = 0; j < OUTPUT_NODES; j++) weight_hid_out[i][j] += learning_rate * output_delta[j] * hidden[i];
         bias_hid_node[i] += learning_rate * hidden_delta[i];
