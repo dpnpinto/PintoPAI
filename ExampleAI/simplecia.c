@@ -1,3 +1,5 @@
+// Kiss form AI by Duarte Pedro Pinto
+// https://dpnpinto.github.io
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h> // need math for exponecial exp
@@ -48,8 +50,9 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     double output_error[OUTPUT_NODES];  // store  the output errors
     double output_delta[OUTPUT_NODES];   //  store the output delta
     for (int i = 0; i < OUTPUT_NODES; i++) {
-        output_error[i] = target[i] - output_layer[i];  //  get the error  for each output in this example we have only one
-        output_delta[i] = output_error[i] * sigmoid_derivative(output_layer[i]);  
+        output_error[i] = target[i] - output_layer[i];  //  get the derivative of the squared error loss function for the output
+        // It is usefull to get target subtracted from output to obtain the negative value for the gradient and save a subtraction calculation
+        output_delta[i] = output_error[i] * sigmoid_derivative(output_layer[i]);
     }
 
     double hidden_delta[HIDDEN_NODES];
