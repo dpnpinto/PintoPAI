@@ -1,5 +1,6 @@
-// Kiss form AI by Duarte Pedro Pinto
+// KISS form AI by Duarte Pedro Pinto
 // https://dpnpinto.github.io
+// https://www.youtube.com/@dpinto.engenharia
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h> // need math for exponecial exp
