@@ -56,7 +56,8 @@ void train(double input[INPUT_NODES], double target[OUTPUT_NODES]) {
     for (int i = 0; i < OUTPUT_NODES; i++) {
         output_error[i] = target[i] - output_layer[i];  //  get the derivative of the squared error loss function for the output
         // It is usefull to get target subtracted from output to obtain the negative value for the gradient and save a subtraction calculation
-        output_delta[i] = output_error[i] * sigmoid_derivative(output_layer[i]);
+        output_delta[i] = output_error[i] * sigmoid_derivative(output_layer[i]); // With the chain rule lets see (delta) how much calculate the Delta
+        // It tells you how much you nedd to adjust the input in this specific neuron to reduce the error.
     }
 
     double hidden_delta[HIDDEN_NODES];
