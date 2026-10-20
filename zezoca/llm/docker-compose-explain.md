@@ -11,20 +11,19 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./models:/models
+      - ./models:/models:ro # Mounted as read-only to prevent accidental model modifications
     command: >
       --model /models/Qwen3-Coder-30B-A3B-Instruct-Q5_K_M.gguf
       --host 0.0.0.0
       --port 8080
-      --ctx-size 4096
-      --batch-size 4096
-      --ubatch-size 4096
+      --ctx-size 8192
+      --batch-size 2048
+      --ubatch-size 512
       --threads 4
       --n-gpu-layers -1
       --cache-type-k q8_0
       --cache-type-v q8_0
       --flash-attn on
-      --no-mmap
     deploy:
       resources:
         reservations:
